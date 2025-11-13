@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shahab Nabavi, MD — Anesthesiology & AI/CMR</title>
+  <meta name="description" content="Personal & academic homepage of Shahab Nabavi: anesthesiology, perioperative medicine, AI/ML, cardiac MRI." />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#0f172a; --muted:#475569; --accent:#1d4ed8; --accent-2:#0ea5e9;
+      --card:#f8fafc; --border:#e2e8f0; --shadow:0 8px 30px rgba(2,6,23,.08);
+      --radius:18px; --radius-sm:12px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b1220; --fg:#e6edf3; --muted:#96a3b6; --accent:#60a5fa; --accent-2:#38bdf8;
+        --card:#0f172a; --border:#1f2937; --shadow:0 8px 30px rgba(0,0,0,.35);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--bg); color:var(--fg); font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%; display:block}
+    .container{max-width:1100px; margin:0 auto; padding:24px}
+    /* Navbar */
+    .nav{position:sticky; top:0; z-index:50; backdrop-filter: blur(10px); background:color-mix(in oklab, var(--bg) 80%, transparent); border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 24px; max-width:1100px; margin:0 auto;}
+    .brand{font-weight:800; letter-spacing:.2px}
+    .nav a{margin-left:14px; font-weight:600}
+    /* Hero */
+    .hero{display:grid; gap:22px; grid-template-columns:1fr; padding:36px 0 18px}
+    @media(min-width:900px){ .hero{grid-template-columns:1.6fr .8fr; align-items:center} }
+    .hero-card{background:linear-gradient(135deg, color-mix(in oklab, var(--accent) 12%, transparent), transparent 30%), var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px; box-shadow:var(--shadow)}
+    .title{font-size:clamp(28px, 3.8vw, 44px); margin:0 0 6px 0; line-height:1.1}
+    .subtitle{color:var(--muted); font-size:clamp(16px, 2.1vw, 18px)}
+    .avatar{width:140px; height:140px; border-radius:22px; object-fit:cover; border:1px solid var(--border); box-shadow:var(--shadow); background:var(--card)}
+    .chips{margin-top:12px}
+    .chip{display:inline-block; padding:6px 10px; border:1px solid var(--border); border-radius:999px; margin:6px 8px 0 0; font-size:.9rem}
+    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+    .btn{display:inline-block; padding:10px 16px; border-radius:12px; border:1px solid var(--border); background:var(--bg); font-weight:700}
+    .btn:hover{background:var(--card)}
+    .btn.primary{background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:white; border:none}
+    .btn.primary:hover{filter:brightness(1.05)}
+    /* Sections */
+    section{margin-top:34px}
+    h2{font-size:1.6rem; margin:0 0 10px}
+    .grid{display:grid; gap:16px; grid-template-columns:1fr}
+    @media(min-width:900px){ .grid.two{grid-template-columns:1.3fr .7fr} .grid.three{grid-template-columns:repeat(3, 1fr)} }
+    .card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:16px; box-shadow:var(--shadow)}
+    .kicker{font-size:.95rem; color:var(--muted); margin-bottom:6px}
+    .list{margin:8px 0 0 0; padding-left:18px}
+    .list li{margin:6px 0}
+    .pub{margin:10px 0; padding:12px; border-left:3px solid var(--accent); background:color-mix(in oklab, var(--card) 90%, transparent); border-radius:10px}
+    .pub small{color:var(--muted)}
+    /* Timeline */
+    .timeline{position:relative; margin:0; padding-left:22px; list-style:none}
+    .timeline::before{content:\"\"; position:absolute; left:9px; top:0; bottom:0; width:2px; background:var(--border)}
+    .timeline li{position:relative; margin:0 0 14px 0}
+    .timeline li::marker{content:\"\"}
+    .dot{position:absolute; left:-2px; top:3px; width:12px; height:12px; background:var(--accent); border-radius:50%; box-shadow:0 0 0 3px color-mix(in oklab, var(--accent) 25%, transparent)}
+    /* Footer */
+    footer{margin:40px 0 10px; color:var(--muted); font-size:.95rem; text-align:center}
+    .muted{color:var(--muted)}
+    .nowrap{white-space:nowrap}
+    /* Utility */
+    .two-col{display:grid; grid-template-columns:1fr; gap:14px}
+    @media(min-width:650px){ .two-col{grid-template-columns:1fr 1fr} }
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+  </style>
+</head>
+<body>
+  <div class="nav" role="navigation">
+    <div class="nav-inner">
+      <div class="brand">Shahab&nbsp;Nabavi</div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#students">Students</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <h1 class="title">Anesthesiology × AI for Better Perioperative Care</h1>
+        <p class="subtitle">Assistant Professor of Anesthesiology (IUMS). Research in ML‑guided decision support, ERAS pathways, and cardiac MRI reconstruction (domain adaptation, MoE, spectral guidance).</p>
+        <div class="chips">
+          <span class="chip">Perioperative AI</span>
+          <span class="chip">Cardiac MRI</span>
+          <span class="chip">Domain Adaptation</span>
+          <span class="chip">Mixture‑of‑Experts</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn" href="Shahab-Nabavi-CV.pdf" download>Download CV</a>
+        </div>
+      </div>
+      <div style="display:flex; justify-content:center">
+        <img class="avatar" src="avatar.jpg" alt="Portrait of Shahab Nabavi" />
+      </div>
+    </section>
+
+    <!-- ABOUT + HIGHLIGHTS -->
+    <section id="about" class="grid two">
+      <div class="card">
+        <h2>About</h2>
+        <p>I’m an anesthesiologist and faculty member at Iran University of Medical Sciences (IUMS). My work bridges clinical anesthesiology, enhanced recovery (ERAS), and applied machine learning for medical imaging and perioperative decision support.</p>
+        <p class="muted">I collaborate with residents and trainees on projects in ML‑guided hemodynamics, opioid‑sparing analgesia, and robust CMR image reconstruction.</p>
+      </div>
+      <div class="card">
+        <h2>Highlights</h2>
+        <ul class="timeline">
+          <li><span class="dot"></span><strong>2025:</strong> Talk — <em>Machine Learning‑Guided Anesthesiology</em></li>
+          <li><span class="dot"></span><strong>2025:</strong> ERAS sessions — Geriatric &amp; Bariatric pathways</li>
+          <li><span class="dot"></span><strong>2026 (planned):</strong> ISMRM abstract — <em>AdaptCMR</em></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <h2>Research</h2>
+      <div class="two-col">
+        <div class="card">
+          <div class="kicker">CMR Reconstruction</div>
+          <strong>AdaptCMR</strong>: spectrally guided mixture‑of‑experts for efficient multi‑contrast reconstruction. Parameter‑efficient decoders with view/contrast specialization.
+        </div>
+        <div class="card">
+          <div class="kicker">Perioperative ML</div>
+          Predictive modeling for hypotension, opioid‑sparing analgesia, and ML‑guided decision support in ERAS pathways.
+        </div>
+        <div class="card">
+          <div class="kicker">IQA & Domain Adaptation</div>
+          Robust CMR IQA and adaptation from simulated to real‑world artifacts (motion, Gibbs, aliasing).
+        </div>
+        <div class="card">
+          <div class="kicker">Methodology</div>
+          Mixture‑of‑experts routing, spectral guidance, prompt‑style conditioning, and physics‑guided unrolled baselines.
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <h2>Selected Publications</h2>
+      <div class="pub">
+        <strong>ML‑Based Prediction of Post‑Transplant Graft Dysfunction</strong> <small>— Journal, Year</small><br/>
+        <a href="#">DOI</a> · <a href="#">preprint</a>
+      </div>
+      <div class="pub">
+        <strong>Feature Importance for Induction Hypotension: ML vs Statistical Models</strong> <small>— Journal, Year</small><br/>
+        <a href="#">DOI</a>
+      </div>
+      <div class="pub">
+        <strong>AdaptCMR: Spectrally Guided MoE for CMR Reconstruction</strong> <small>— ISMRM 2026 (in prep)</small>
+      </div>
+      <p class="muted">Complete list on <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    </section>
+
+    <!-- TALKS & TEACHING -->
+    <section id="talks" class="grid two">
+      <div class="card">
+        <h2>Talks</h2>
+        <ul class="list">
+          <li>Machine Learning‑Guided Anesthesiology: Recent Trends & Applications (2025)</li>
+          <li>ERAS in Bariatric & Geriatric Surgery (17th International Anesthesiology Congress)</li>
+        </ul>
+      </div>
+      <div id="teaching" class="card">
+        <h2>Teaching</h2>
+        <ul class="list">
+          <li>Computer Vision with Deep Learning — guest lectures</li>
+          <li>Workshops: ML for perioperative decision support</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- STUDENTS & SERVICE -->
+    <section id="students" class="grid two">
+      <div class="card">
+        <h2>Students & Trainees</h2>
+        <ul class="list">
+          <li><strong>Shayan Kebriti</strong> — 3D mesh generation for in‑silico trials</li>
+          <li>Graduate mentee — Mamba for medical image analysis</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Service</h2>
+        <ul class="list">
+          <li>Peer reviewer: JCMR, JEHP</li>
+          <li>Session organizer & mentor for research groups</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="grid two">
+      <div class="card">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p>Affiliation: Department of Anesthesiology, Iran University of Medical Sciences (IUMS)</p>
+        <div class="two-col">
+          <a class="btn" href="https://github.com/snabavi" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn" href="https://orcid.org/YOUR_ORCID" target="_blank" rel="noopener">ORCID</a>
+          <a class="btn" href="https://www.linkedin.com/in/YOUR_ID" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>News</h2>
+        <ul class="list">
+          <li>Nov 2025 — Preparing ISMRM 2026 abstract on AdaptCMR.</li>
+          <li>Oct 2025 — Talk on ML‑Guided Anesthesiology.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>© <span id="year"></span> Shahab Nabavi · Built with HTML/CSS · Hosted on GitHub Pages</footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shahab Nabavi — Personal & Academic Homepage</title>
+  <meta name="description" content="Personal and academic homepage of Shahab Nabavi: anesthesiology, perioperative medicine, AI/ML in medical imaging, mentorship, publications, and talks." />
+  <link rel="icon" href="favicon.ico" />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{
+      --bg: #ffffff; --fg:#0f172a; --muted:#475569; --accent:#2563eb; --card:#f8fafc; --border:#e2e8f0;
+    }
+    @media(prefers-color-scheme:dark){
+      :root{ --bg:#0b1220; --fg:#e6edf3; --muted:#94a3b8; --accent:#3b82f6; --card:#0f172a; --border:#1f2937; }
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; background:var(--bg); color:var(--fg); line-height:1.6}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:980px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;gap:20px;padding:16px 0 8px;flex-wrap:wrap}
+    .avatar{width:92px;height:92px;border-radius:50%;object-fit:cover;border:2px solid var(--border);background:var(--card)}
+    h1{font-size:1.9rem;margin:0}
+    .tagline{color:var(--muted);margin-top:4px}
+    nav{margin-top:8px}
+    nav a{margin-right:14px;font-weight:600}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:24px}
+    @media(min-width:860px){ .grid{grid-template-columns:2fr 1fr} }
+    section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
+    h2{margin:0 0 8px;font-size:1.25rem}
+    ul{margin:8px 0 0 20px}
+    .pill{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;margin:4px 6px 0 0;background:transparent}
+    .card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:12px;margin-top:10px}
+    footer{margin:28px 0;color:var(--muted);font-size:.95rem}
+    .kicker{font-size:.9rem;color:var(--muted)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:var(--bg);font-weight:600}
+    .btn:hover{background:var(--card)}
+    .nowrap{white-space:nowrap}
+    .two-col{display:grid;grid-template-columns:1fr;gap:10px}
+    @media(min-width:600px){.two-col{grid-template-columns:1fr 1fr}}
+    code.kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:var(--card);border:1px solid var(--border);padding:1px 6px;border-radius:6px}
+  </style>
+  <!-- Optional: Google Analytics / Plausible script goes here -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shahab Nabavi",
+    "jobTitle": "Assistant Professor of Anesthesiology",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Iran University of Medical Sciences (IUMS)"
+    },
+    "url": "https://USERNAME.github.io/",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=YOUR_ID",
+      "https://orcid.org/YOUR_ORCID",
+      "https://github.com/USERNAME",
+      "https://www.linkedin.com/in/YOUR_ID"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img class="avatar" src="avatar.jpg" alt="Portrait of Shahab Nabavi" />
+      <div>
+        <h1>Shahab Nabavi</h1>
+        <div class="tagline">Assistant Professor of Anesthesiology • Perioperative AI/ML • Cardiac MRI & Image Analysis</div>
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#talks">Talks</a>
+          <a href="#students">Students</a>
+          <a href="#service">Service</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section id="about">
+          <h2>About</h2>
+          <p>I am an anesthesiologist and faculty member at Iran University of Medical Sciences (IUMS). My work spans perioperative care, enhanced recovery, and applied machine learning for medical imaging—with a focus on cardiac MRI reconstruction, image quality assessment, and ML-guided decision support.</p>
+          <div class="kicker">Interests:</div>
+          <div>
+            <span class="pill">Anesthesiology</span>
+            <span class="pill">Perioperative AI</span>
+            <span class="pill">Cardiac MRI</span>
+            <span class="pill">Domain Adaptation</span>
+            <span class="pill">Mixture-of-Experts</span>
+            <span class="pill">Image Reconstruction</span>
+          </div>
+        </section>
+
+        <section id="research">
+          <h2>Research</h2>
+          <div class="card">
+            <strong>AdaptCMR:</strong> Spectrally guided mixture-of-experts for efficient multi-contrast CMR reconstruction.
+          </div>
+          <div class="card">
+            <strong>ML-Guided Anesthesiology:</strong> Predictive modeling for hypotension, opioid-sparing analgesia, and ERAS pathways.
+          </div>
+          <div class="card">
+            <strong>Image Quality & Domain Adaptation:</strong> Robust CMR IQA and generalization to real-world artefacts.
+          </div>
+        </section>
+
+        <section id="publications">
+          <h2>Selected Publications</h2>
+          <ol>
+            <li>
+              <strong>Machine Learning-Based Prediction of Postoperative Graft Dysfunction Following Liver Transplantation</strong> — <em>Journal</em>, Year. <a href="#">DOI</a>
+            </li>
+            <li>
+              <strong>Comparative analysis of the importance of features in predicting hypotension following anesthesia induction</strong> — <em>Journal</em>, Year. <a href="#">DOI</a>
+            </li>
+            <li>
+              <strong>AdaptCMR: Spectrally Guided MoE for CMR Reconstruction</strong> — <em>ISMRM Abstract</em>, 2026 (in prep).
+            </li>
+          </ol>
+          <p>
+            Full list on <a href="https://scholar.google.com/">Google Scholar</a>.
+          </p>
+        </section>
+
+        <section id="teaching">
+          <h2>Teaching</h2>
+          <ul>
+            <li>Computer Vision with Deep Learning (guest lectures)</li>
+            <li>ERAS in Bariatric and Geriatric Surgery (conference talks)</li>
+            <li>Workshops on ML for perioperative decision support</li>
+          </ul>
+        </section>
+
+        <section id="talks">
+          <h2>Talks</h2>
+          <ul>
+            <li><span class="nowrap">2025</span> — Machine Learning‑Guided Anesthesiology: Recent Trends & Applications</li>
+            <li><span class="nowrap">2025</span> — ERAS: Bariatric & Geriatric Pathways (17th International Anesthesiology Congress)</li>
+          </ul>
+        </section>
+
+        <section id="students">
+          <h2>Students & Trainees</h2>
+          <ul>
+            <li><strong>Shayan Kebriti</strong> — 3D mesh generation for in silico trials</li>
+            <li>Graduate mentee — Mamba for medical image analysis</li>
+          </ul>
+        </section>
+
+        <section id="service">
+          <h2>Service</h2>
+          <ul>
+            <li>Peer reviewer: JCMR, JEHP</li>
+            <li>Session organizer & mentor for research groups</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside>
+        <section>
+          <h2>On the web</h2>
+          <div class="two-col">
+            <a class="btn" href="mailto:you@example.com">Email</a>
+            <a class="btn" href="/Shahab-Nabavi-CV.pdf" download>CV (PDF)</a>
+            <a class="btn" href="https://github.com/USERNAME">GitHub</a>
+            <a class="btn" href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a>
+            <a class="btn" href="https://orcid.org/YOUR_ORCID">ORCID</a>
+            <a class="btn" href="https://www.linkedin.com/in/YOUR_ID">LinkedIn</a>
+          </div>
+        </section>
+        <section>
+          <h2>News</h2>
+          <ul>
+            <li>Nov 2025 — Preparing ISMRM 2026 abstract on AdaptCMR.</li>
+            <li>Oct 2025 — Talk on ML‑Guided Anesthesiology.</li>
+          </ul>
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+          <p>Affiliation: Department of Anesthesiology, Iran University of Medical Sciences (IUMS)</p>
+          <p>For quick updates, follow my <a href="#">GitHub</a> or <a href="#">LinkedIn</a>.</p>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Shahab Nabavi · Built with plain HTML/CSS · Hosted on GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
